@@ -1,0 +1,12 @@
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="members.scss" type="text/css">
+</head>
+<body>
+<h1>Members</h1>
+<ul>
+	<% @members.each do |member| %>
+		<%= link_to member.name, member_path(member.id) %><br>
+	<% end %>
+</ul>
+</body>
