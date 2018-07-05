@@ -1,0 +1,41 @@
+// Place all the styles related to the top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+div{
+	text-align: center;
+}
+
+.top *{
+  width: 860px;
+  height: auto;
+  overflow: visible;
+  position: relative;
+  padding-top: 0;
+  margin: 0;
+}
+
+.logo{
+	position: absolute;
+	width:250px;
+	height: auto;
+	left:150px;
+}
+
+.menu img{
+  width: 1000px;
+  height: auto;
+  margin: 0;
+}
+
+.menu p{
+  position: absolute;
+  width: 1200px;
+  color: white;
+  font-size: 26px;
+  top: 700px;
+  left: 70px;
+  a:link {color:white; text-decoration:none }
+  a:visited { color:white; text-decoration:none }
+  a:hover { color:white; text-decoration:none }
+  a:active { color:white; text-decoration:none }
+}

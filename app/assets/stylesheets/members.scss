@@ -1,4 +1,22 @@
 // Place all the styles related to the Members controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {background-color: #FAE5F6;}
+h1 img{
+	width: 300px;
+  	height: auto;
+	margin-left:40px;
+}
+
+body {
+	background-color: #FAE5F6;
+	a:link {color:white; text-decoration:none }
+  	a:visited { color:white; text-decoration:none }
+  	a:hover { color:white; text-decoration:none }
+  	a:active { color:white; text-decoration:none }
+}
+
+.member img{
+	width: 1000px;
+  	height: auto;
+  	margin-left:0;
+}
