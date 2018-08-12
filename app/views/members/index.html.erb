@@ -3,30 +3,26 @@
 	<link rel="stylesheet" href="members.scss" type="text/css">
 </head>
 <body>
-<h1>
-	<img src="assets/members.png" />
-</h1>
-<ul>
-	<div class="member">
-		<%= link_to member_path(1), target: "_blank" do %>
-	 		<%= image_tag 'kanako.png' %>
-		<% end %>
-		<%= link_to member_path(2), target: "_blank" do %>
-	 		<%= image_tag 'shiori.png' %>
-		<% end %>
-		<%= link_to member_path(3), target: "_blank" do %>
-	 		<%= image_tag 'ayaka.png' %>
-		<% end %>
-		<%= link_to member_path(4), target: "_blank" do %>
-	 		<%= image_tag 'reni.png' %>
-		<% end %>
-		<%= link_to member_path(5), target: "_blank" do %>
-	 		<%= image_tag 'momoka.png' %>
-		<% end %>
+	<div class="profile">
+		<img src="assets/members.png" alt="" class="title" /><br>
 	</div>
-
-	<% @members.each do |member| %>
-		<%= link_to member.name, member_path(member.id) %><br>
-	<% end %>
-</ul>
+	<ul>
+		<div class="member">
+			<%= link_to member_path(1), target: "_blank" do %>
+				<%= image_tag 'kanako.png' %>
+			<% end %>
+			<%= link_to member_path(2), target: "_blank" do %>
+				<%= image_tag 'shiori.png' %>
+			<% end %>
+			<%= link_to member_path(3), target: "_blank" do %>
+				<%= image_tag 'ayaka.png' %>
+			<% end %>
+			<%= link_to member_path(4), target: "_blank" do %>
+				<%= image_tag 'reni.png' %>
+			<% end %>
+			<%= link_to member_path(5), target: "_blank" do %>
+				<%= image_tag 'momoka.png' %>
+			<% end %>
+		</div>
+	</ul>
 </body>
