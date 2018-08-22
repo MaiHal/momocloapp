@@ -7,8 +7,5 @@ Rails.application.routes.draw do
   		get 'show'
   	end
 
-  	resources :users do
-  		get 'index'
-  		get 'show' 
-  	end
+  	resources :users 
 end
