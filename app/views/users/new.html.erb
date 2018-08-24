@@ -6,72 +6,63 @@
 	会員登録
 </h1>
 <body>
-	<!-- 
-		label, text_field, password_field,
-		file_field, check_box, radio_button,
-		text_area, email_field, range_field,
-		number_field, select, 
-
-		hidden_field, 
-	-->
-	<%= form_for :post, url: users_path do |f| %>
+	<%= form_tag(users_path, method: :post) do %>
 		<p>
-			<%= f.label :name, "名前" %><br>
-			<%= f.text_field :name, placeholder: 'enter name ' %>
+			<%= label_tag :name, "名前" %><br>
+			<%= text_field_tag :name %>
 		</p>
 		<p>
-			<%= f.label :email, "メールアドレス" %><br>
-			<%= f.email_field :email %>
+			<%= label_tag :email, "メールアドレス" %><br>
+			<%= email_field_tag :email %>
 		</p>
 		<p>
-			<%= f.label :satisfaction, "満足度" %><br>
-			<%= f.range_field :satisfaction %>
+			<%= label_tag :satisfaction, "満足度" %><br>
+			<%= range_field_tag :satisfaction %>
 		</p>
 		<p>
-			<%= f.label :live_experience, "ライブ参加回数" %><br>
-			<%= f.number_field :live_experience %>
+			<%= label_tag :live_experience, "ライブ参加回数" %><br>
+			<%= number_field_tag :live_experience %>
 		</p>
 		<p>
-			<%= f.label :adress, "お住まい" %><br>
-			<%= f.select :adress , [["北海道","北海道"],["東京","東京"]]%>
+			<%= label_tag :adress, "お住まい" %><br>
+			<%= select_tag(:adress , options_for_select(["北海道","東京"])) %>
 		</p>
 		<p>
-			<%= f.label :phone, "電話番号" %><br>
-			<%= f.telephone_field :phone %>
+			<%= label_tag :phone, "電話番号" %><br>
+			<%= telephone_field_tag :phone %>
 		</p>
 		<p>
-			<%= f.label :image, "アイコン画像" %><br>
-			<%= f.file_field :image %>
+			<%= label_tag :image, "アイコン画像" %><br>
+			<%= file_field_tag :image %>
 		</p>
 		<p>
-			<%= f.label :password, "パスワード" %><br>
-			<%= f.password_field :password %>
+			<%= label_tag :password, "パスワード" %><br>
+			<%= password_field_tag :password %>
 		</p>
 
 		<p>
-			<%= f.label :hidden, "隠し" %><br>
-			<%= f.hidden_field :hidden %>
+			<%= hidden_field_tag :hidden %>
 		</p>
 		<p>
-			<%= f.label :intro, "自己紹介" %><br>
-			<%= f.text_area :intro %>
+			<%= label_tag :intro, "自己紹介" %><br>
+			<%= text_area_tag :intro %>
 		</p>
 		<p>
-			<%= f.label :gender, "性別" %><br>
-			<%= f.check_box :gender %>
-			<%= f.label :gender, "男" %>
-			<%= f.check_box :gender %>
-			<%= f.label :gender, "女" %>
+			<%= label_tag :gender, "性別" %><br>
+			<%= check_box_tag :gender %>
+			<%= label_tag :gender, "男" %>
+			<%= check_box_tag :gender %>
+			<%= label_tag :gender, "女" %>
 		</p>
 		<p>
-			<%= f.label :fan_of, "推し" %><br>
-			<label><%= f.radio_button :fan_of, "百田夏菜子" %> 百田夏菜子</label><br>
-			<label><%= f.radio_button :fan_of, "玉井詩織" %> 玉井詩織</label><br>
-			<label><%= f.radio_button :fan_of, "佐々木彩夏" %> 佐々木彩夏</label><br>
-			<label><%= f.radio_button :fan_of, "高城れに" %> 高城れに</label><br>
-			<label><%= f.radio_button :fan_of, "有安杏果" %> 有安杏果</label><br>
-			<label><%= f.radio_button :fan_of, "箱" %> 箱</label><br>
+			<%= label_tag :fan_of, "推し" %><br>
+			<label><%= radio_button_tag :fan_of, "百田夏菜子" %> 百田夏菜子</label><br>
+			<label><%= radio_button_tag :fan_of, "玉井詩織" %> 玉井詩織</label><br>
+			<label><%= radio_button_tag :fan_of, "佐々木彩夏" %> 佐々木彩夏</label><br>
+			<label><%= radio_button_tag :fan_of, "高城れに" %> 高城れに</label><br>
+			<label><%= radio_button_tag :fan_of, "有安杏果" %> 有安杏果</label><br>
+			<label><%= radio_button_tag :fan_of, "箱" %> 箱</label><br>
 		</p>
-		<%= f.submit %>
+		<%= submit_tag %>
 	<% end %>
 </body>
