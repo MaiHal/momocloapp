@@ -34,6 +34,7 @@
 		<p>
 			<%= f.label :adress, "お住まい" %><br>
 			<%= f.select :adress , [["北海道","北海道"],["東京","東京"]]%>
+			<%= f.select(:adress, options_for_select(["北海道","東京"])) %>
 		</p>
 		<p>
 			<%= f.label :phone, "電話番号" %><br>
@@ -49,7 +50,6 @@
 		</p>
 
 		<p>
-			<%= f.label :hidden, "隠し" %><br>
 			<%= f.hidden_field :hidden %>
 		</p>
 		<p>
