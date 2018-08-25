@@ -8,6 +8,10 @@
 <body>
 	<%= form_tag(users_path, method: :post) do %>
 		<p>
+			<%= search_field_tag :name %>
+			<%= submit_tag "検索"%>
+		</p>
+		<p>
 			<%= label_tag :name, "名前" %><br>
 			<%= text_field_tag :name %>
 		</p>
@@ -17,15 +21,27 @@
 		</p>
 		<p>
 			<%= label_tag :satisfaction, "満足度" %><br>
-			<%= range_field_tag :satisfaction %>
+			<p>
+				<%= range_field_tag :satisfaction %><br>
+			</p>
+			不満　　　　　満足
 		</p>
 		<p>
 			<%= label_tag :live_experience, "ライブ参加回数" %><br>
-			<%= number_field_tag :live_experience %>
+			<%= number_field_tag :live_experience %>回
 		</p>
 		<p>
 			<%= label_tag :adress, "お住まい" %><br>
 			<%= select_tag(:adress , options_for_select(["北海道","東京"])) %>
+		</p>
+		<p>
+			<%= label_tag :birth, "生年月日" %><br>
+			<%= date_field_tag :birth %><br>
+			<%= datetime_field_tag :birth %><br>
+			<%= datetime_local_field_tag :birth %><br>
+			<%= month_field_tag :birth %>
+			<%= time_field_tag :birth %>
+			<%= week_field_tag :birth %>
 		</p>
 		<p>
 			<%= label_tag :phone, "電話番号" %><br>
@@ -63,6 +79,16 @@
 			<label><%= radio_button_tag :fan_of, "有安杏果" %> 有安杏果</label><br>
 			<label><%= radio_button_tag :fan_of, "箱" %> 箱</label><br>
 		</p>
-		<%= submit_tag %>
+
+		<p>
+			<%= label_tag :url, "関連ページ" %><br>
+			<%= url_field_tag :url %>
+		</p>
+
+		<p>
+			<%= label_tag :color, "好きな色" %><br>
+			<%= color_field_tag :color %>
+		</p>
+		<%= submit_tag "提出"%>
 	<% end %>
 </body>
