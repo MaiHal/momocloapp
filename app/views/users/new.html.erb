@@ -6,15 +6,11 @@
 	会員登録
 </h1>
 <body>
-	<!-- 
-		label, text_field, password_field,
-		file_field, check_box, radio_button,
-		text_area, email_field, range_field,
-		number_field, select, 
-
-		hidden_field, 
-	-->
 	<%= form_for :post, url: users_path do |f| %>
+		<p>
+			<%= f.search_field :name %>
+			<%= f.submit "検索" %>
+		</p>
 		<p>
 			<%= f.label :name, "名前" %><br>
 			<%= f.text_field :name, placeholder: 'enter name ' %>
@@ -25,7 +21,8 @@
 		</p>
 		<p>
 			<%= f.label :satisfaction, "満足度" %><br>
-			<%= f.range_field :satisfaction %>
+			<%= f.range_field :satisfaction %><br>
+			不満　　　　　満足
 		</p>
 		<p>
 			<%= f.label :live_experience, "ライブ参加回数" %><br>
@@ -35,6 +32,15 @@
 			<%= f.label :adress, "お住まい" %><br>
 			<%= f.select :adress , [["北海道","北海道"],["東京","東京"]]%>
 			<%= f.select(:adress, options_for_select(["北海道","東京"])) %>
+		</p>
+		<p>
+			<%= f.label :birth, "生年月日" %><br>
+			<%= f.date_field :birth %><br>
+			<%= f.datetime_field :birth %><br>
+			<%= f.datetime_local_field :birth %><br>
+			<%= f.month_field :birth %>
+			<%= f.time_field :birth %>
+			<%= f.week_field :birth %>
 		</p>
 		<p>
 			<%= f.label :phone, "電話番号" %><br>
@@ -71,6 +77,14 @@
 			<label><%= f.radio_button :fan_of, "高城れに" %> 高城れに</label><br>
 			<label><%= f.radio_button :fan_of, "有安杏果" %> 有安杏果</label><br>
 			<label><%= f.radio_button :fan_of, "箱" %> 箱</label><br>
+		</p>
+		<p>
+			<%= f.label :url, "関連ページ" %><br>
+			<%= f.url_field :url %>
+		</p>
+		<p>
+			<%= f.label :color, "好きな色" %><br>
+			<%= f.color_field :color %>
 		</p>
 		<%= f.submit %>
 	<% end %>
