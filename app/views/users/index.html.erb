@@ -2,9 +2,18 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="members.scss" type="text/css">
 </head>
-<h1>
-	会員登録
-</h1>
-<h2>
-	<%= link_to '新規', new_user_path %>
-</h2>
+<body>
+	<div class="profile">
+		<img src="assets/login.png" alt="" class="title" /><br>
+	</div>
+	<ul>
+		<div class="button">
+			<%= link_to new_user_path, target: "_blank" do %>
+				<%= image_tag 'login_time.png' %>
+			<% end %><br>
+			<%= link_to new_user_path, target: "_blank" do %>
+				<%= image_tag 'register.png' %>
+			<% end %>
+		</div>
+	</ul>
+</body>
