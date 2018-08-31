@@ -7,5 +7,9 @@ Rails.application.routes.draw do
   		get 'show'
   	end
 
-  	resources :users 
+	resources :users do
+	end
+
+	resources :discography do
+	end
 end

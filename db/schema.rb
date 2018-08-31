@@ -12,15 +12,15 @@
 
 ActiveRecord::Schema.define(version: 2018_08_12_142327) do
 
+  create_table "discography", force: :cascade do |t|
+    t.string "name", null: false
+    t.date "released_date"
+    t.string "composer"
+  end
+
   create_table "members", force: :cascade do |t|
     t.string "name"
     t.string "color"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "songs", force: :cascade do |t|
-    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 2018_08_12_142327) do
     t.string "name", null: false
     t.string "email", null: false
     t.string "password", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
