@@ -12,8 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2018_08_12_142327) do
 
-  create_table "discography", force: :cascade do |t|
+  create_table "discographies", force: :cascade do |t|
     t.string "name", null: false
+    t.string "artist", null: false
     t.date "released_date"
     t.string "composer"
   end

@@ -1,1 +1,13 @@
 <h1>discography</h1>
+<body>
+	<table border="1">
+		<tr>
+			<th>name</th><th>artist</th><th>released_date</th><th>composer</th>
+		</tr>
+		<% @discography.each do |song| %>
+		<tr>
+			<th><%= song.name %></th><th><%= song.artist %></th><th><%= song.released_date %></th><th><%= song.composer %></th>
+		</tr>
+		<% end %>
+	</table>
+</body>
