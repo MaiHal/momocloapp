@@ -1,13 +1,28 @@
-<h1>discography</h1>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="discography.scss" type="text/css">
+</head>
 <body>
+	<div class="title">
+		<%= image_tag 'discography.png' %><br>
+	</div>
+	<div class="jacket">
+		<% @albums.each do |album| %>
+			<%= image_tag album.image%>
+			<% if album.id == 4 %>
+				<br>
+			<% end %>
+		<% end %>
+	</div>
+
 	<table border="1">
 		<tr>
-			<th>name</th><th>artist</th><th>released_date</th><th>composer</th>
+		<th>name</th><th>artist</th><th>released_date</th><th>composer</th>
 		</tr>
 		<% @discography.each do |song| %>
 		<tr>
 			<th><%= song.name %></th><th><%= song.artist %></th><th><%= song.released_date %></th><th><%= song.composer %></th>
-		</tr>
-		<% end %>
-	</table>
+        </tr>
+        <% end %>
+    </table>
 </body>
