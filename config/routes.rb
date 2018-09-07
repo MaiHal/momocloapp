@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get "momocloapp/user" => "users#index"
   get "momocloapp/user/new" => "users#new"
   get "momocloapp/discography" => "discography#index"
+  get "momocloapp/comments" => "comments#index"
 end
