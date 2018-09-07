@@ -1,15 +1,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  	root 'top#index'
-
-  	resources :members do 
-  		get 'index'
-  		get 'show'
-  	end
-
-	resources :users do
-	end
-
-	resources :discography do
-	end
+  get "momocloapp" => "top#index"
+  get "momocloapp/members" => "members#index" 
+  get "momocloapp/member/:id" => "members#show"
+  get "momocloapp/user" => "users#index"
+  get "momocloapp/user/new" => "users#new"
+  get "momocloapp/discography" => "discography#index"
 end

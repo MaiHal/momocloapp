@@ -3,15 +3,15 @@
 	<link rel="stylesheet" href="members.scss" type="text/css">
 </head>
 <body>
-	<div class="profile">
-		<img src="assets/login.png" alt="" class="title" /><br>
+	<div class="title">
+		<%= image_tag 'login.png' %><br>
 	</div>
 	<ul>
 		<div class="button">
-			<%= link_to new_user_path, target: "_blank" do %>
+			<%= link_to momocloapp_user_new_path, target: "_blank" do %>
 				<%= image_tag 'login_time.png' %>
 			<% end %><br>
-			<%= link_to new_user_path, target: "_blank" do %>
+			<%= link_to momocloapp_user_new_path, target: "_blank" do %>
 				<%= image_tag 'register.png' %>
 			<% end %>
 		</div>
