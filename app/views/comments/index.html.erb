@@ -1,1 +1,23 @@
-<h1>comments</h1>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="discography.scss" type="text/css">
+</head>
+<body>
+	<div class="title">
+		<%= image_tag 'comments.png' %><br>
+	</div>
+	<div class="item">
+		<%= image_tag 'comment_list.png' %><br>
+	</div>
+
+		<% @comments.each do |comment| %>
+			<div class="comment">
+			<%= image_tag 'comment.png' %>
+			<p>
+				<b><font size="4"><%= comment.name %></font></b><br>
+				<%= comment.message %>
+			</p>
+	        <br>
+	        </div>
+	    <% end %>
+</body>

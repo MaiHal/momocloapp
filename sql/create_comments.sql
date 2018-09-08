@@ -1,1 +1,1 @@
-CREATE TABLE IF NOT EXISTS "comments"("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,"name" varchar NOT NULL,"message" varchar NOT NULL,"posted_time" datetime NOT NULL);
+CREATE TABLE IF NOT EXISTS "comments"("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL,"name" varchar NOT NULL,"message" varchar NOT NULL,"posted_time" datetime DEFAULT(CURRENT_TIMESTAMP) NOT NULL);
