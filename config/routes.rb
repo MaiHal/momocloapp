@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get "momocloapp/comments" => "comments#index"
   post "momocloapp/comments" => "comments#create"
   get "momocloapp/comments/:id" => "comments#show", as: 'momocloapp/comment'
+  post "momocloapp/comments/update/:id" => "comments#update", as: 'momocloapp/comment/update'
+  post "momocloapp/comments/:id" => "comments#delete", as: 'momocloapp/comment/delete'
   get "momocloapp/comment/new" => "comments#new"
   post "momocloapp/comment/new" => "comments#create"
 end

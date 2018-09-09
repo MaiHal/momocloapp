@@ -13,4 +13,10 @@
 	</p>
     <br>
 </div>
+<div class="operation">
+<%= image_tag 'edit.png' %>
+<%= form_for(@comment, url: momocloapp_comment_path, method: :post) do |f| %>
+	<%= f.submit "削除する"%>
+<% end %>
+</div>
 </body>
