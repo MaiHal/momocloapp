@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.new(user_params)
+		@user = User.new(users_params)
 		if @user.save
 			render 'index'
 		else
@@ -17,8 +17,7 @@ class UsersController < ApplicationController
 		end
 	end
 
-	private
-		def user_params
-			params.require(:user).permit(:name, :email, :password)
-		end
+	def users_params
+		params.require(:user).permit(:name, :email, :password)
+	end
 end

@@ -14,16 +14,6 @@ div{
   margin-bottom: 30;
 }
 
-.item img{
-  position: absolute;
-  width: 250px;
-  height: auto;
-  left: 150px;
-  margin-top: 100px;
-  padding-bottom: 30;
-  margin-bottom: 30;
-}
-
 .jacket img{
   width: 250px;
   height: auto;
@@ -34,6 +24,7 @@ div{
 
 .comment {
   position: relative;
+  top: -320px;
   color: black;
 }
 
@@ -46,5 +37,28 @@ div{
 
 .comment img{
   width: 250px;
+  height: auto; 
+}
+
+.create {
+  position: relative;
+  color: black;
+  text-align:center;
+}
+
+.create p {
+  position: absolute;
+  top: 20px;
+  text-align:left;
+}
+
+.item img{
+  position: relative;
+  width: 250px;
   height: auto;
+  left: -420px;
+  margin-top: 100px;
+  padding-bottom: 30;
+  margin-bottom: 30;
+  z-index:1;
 }

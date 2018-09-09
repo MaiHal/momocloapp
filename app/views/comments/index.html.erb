@@ -7,17 +7,18 @@
 		<%= image_tag 'comments.png' %><br>
 	</div>
 	<div class="item">
-		<%= image_tag 'comment_list.png' %><br>
+		<%= link_to momocloapp_comment_new_path do %>
+            <%= image_tag 'new_comment.png' %><br>
+        <% end %>
 	</div>
-
-		<% @comments.each do |comment| %>
-			<div class="comment">
-			<%= image_tag 'comment.png' %>
-			<p>
-				<b><font size="4"><%= comment.name %></font></b><br>
-				<%= comment.message %>
-			</p>
-	        <br>
-	        </div>
-	    <% end %>
+	<% @comments.each do |comment| %>
+		<div class="comment">
+		<%= image_tag 'comment.png' %>
+		<p>
+			<b><font size="4"><%= comment.name %></font></b><br>
+			<%= comment.message %>
+		</p>
+        <br>
+        </div>
+    <% end %>
 </body>
