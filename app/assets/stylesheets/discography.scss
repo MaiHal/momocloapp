@@ -62,3 +62,19 @@ div{
   margin-bottom: 30;
   z-index:1;
 }
+
+.single_comment {
+  color: black;
+}
+
+.single_comment img{
+  width: 250px;
+  height: auto; 
+}
+
+.single_comment p {
+  position: absolute;
+  top: 0;
+  left: 560px;
+  text-align:left;
+}

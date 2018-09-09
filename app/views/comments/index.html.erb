@@ -13,7 +13,9 @@
 	</div>
 	<% @comments.each do |comment| %>
 		<div class="comment">
+		<%= link_to momocloapp_comment_path(comment.id) do %>
 		<%= image_tag 'comment.png' %>
+		<% end %>
 		<p>
 			<b><font size="4"><%= comment.name %></font></b><br>
 			<%= comment.message %>

@@ -1,0 +1,16 @@
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="discography.scss" type="text/css">
+</head>
+<body>
+<div class="single_comment">
+	<%= link_to momocloapp_comment_path(@comment.id) do %>
+	<%= image_tag 'comment.png' %>
+	<% end %>
+	<p>
+		<b><font size="4"><%= @comment.name %></font></b><br>
+		<%= @comment.message %>
+	</p>
+    <br>
+</div>
+</body>

@@ -8,8 +8,8 @@
 	</div>
 	<ul>
 		<div class="member">
-			<a href="http://localhost:3000/momocloapp/member/1"><%= image_tag 'kanako.png' %></a>
-			<a href="http://localhost:3000/momocloapp/member/2"><%= image_tag 'shiori.png' %></a>
+			<%= link_to momocloapp_member_path(1) do %><%= image_tag 'kanako.png' %><% end %>
+			<%= link_to momocloapp_member_path(2) do %><%= image_tag 'shiori.png' %><% end %>
 			<a href="http://localhost:3000/momocloapp/member/3"><%= image_tag 'ayaka.png' %></a>
 			<a href="http://localhost:3000/momocloapp/member/4"><%= image_tag 'reni.png' %></a>
 			<a href="http://localhost:3000/momocloapp/member/5"><%= image_tag 'momoka.png' %></a>
