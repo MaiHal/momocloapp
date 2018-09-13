@@ -8,10 +8,10 @@ Rails.application.routes.draw do
   get "momocloapp/user/new" => "users#new"
   get "momocloapp/discography" => "discography#index"
   get "momocloapp/comments" => "comments#index"
-  post "momocloapp/comments" => "comments#create"
-  get "momocloapp/comments/:id" => "comments#show", as: 'momocloapp/comment'
-  post "momocloapp/comments/update/:id" => "comments#update", as: 'momocloapp/comment/update'
-  post "momocloapp/comments/:id" => "comments#delete", as: 'momocloapp/comment/delete'
   get "momocloapp/comment/new" => "comments#new"
-  post "momocloapp/comment/new" => "comments#create"
+  get "momocloapp/comments/:id" => "comments#show", as: 'momocloapp/comment'
+  post "momocloapp/comments/create" => "comments#create"
+  get "momocloapp/comments/:id/edit" => "comments#edit"
+  post "momocloapp/comments/:id/update" => "comments#update"
+  post "momocloapp/comments/:id/destroy" => "comments#destroy"
 end

@@ -4,9 +4,7 @@
 </head>
 <body>
 <div class="single_comment">
-	<%= link_to momocloapp_comment_path(@comment.id) do %>
 	<%= image_tag 'comment.png' %>
-	<% end %>
 	<p>
 		<b><font size="4"><%= @comment.name %></font></b><br>
 		<%= @comment.message %>
@@ -14,9 +12,11 @@
     <br>
 </div>
 <div class="operation">
-<%= image_tag 'edit.png' %>
-<%= form_for(@comment, url: momocloapp_comment_path, method: :post) do |f| %>
-	<%= f.submit "削除する"%>
-<% end %>
+	<%= link_to("/momocloapp/comments/#{@comment.id}/destroy", {method: "post"}) do %>
+		<%= image_tag 'delete.png' %>
+	<% end %>
+	<%= link_to("/momocloapp/comments/#{@comment.id}/edit", {method: "get"}) do %>
+		<%= image_tag 'edit.png' %>
+	<% end %>
 </div>
 </body>

@@ -1,0 +1,17 @@
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="discography.scss" type="text/css">
+</head>
+<body>
+    <%= form_tag("/momocloapp/comments/#{@comment.id}/update") do %>
+      <div class="create">
+        <p>
+          名前<br>
+          <textarea name="name"><%= @comment.name%></textarea><br>
+          コメント<br>
+          <textarea name="message"><%= @comment.message%></textarea><br>
+          <input type="submit" value="保存">
+        </p>
+      </div>
+    <% end %>
+</body>

@@ -8,17 +8,24 @@ class CommentsController < ApplicationController
 		@comment = Comment.new
 	end
 
-	def show
+	def edit
 		@comment = Comment.find(params[:id])
 	end
 
 	def update
-		@comment = Comment.find(params[:id]).updateall
+		@comment = Comment.find(params[:id])
+		@comment.message = params[:message]
+		@comment.save
 		redirect_to :action => 'index'
 	end
 
-	def delete
-		@comment = Comment.find(params[:id]).delete
+	def show
+		@comment = Comment.find(params[:id])
+	end
+
+	def destroy
+		@comment = Comment.find(params[:id])
+		@comment.destroy
 		redirect_to :action => 'index'
 	end
 
